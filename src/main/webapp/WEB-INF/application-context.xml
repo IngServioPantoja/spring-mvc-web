@@ -12,21 +12,8 @@
 	
 	<context:annotation-config />
 	<tx:annotation-driven transaction-manager="transactionManager"/>
-	<context:component-scan base-package="co.com.sp.capaservicio" />
-	<context:component-scan base-package="co.com.sp.capapersistencia" />
-	<context:component-scan base-package="co.com.sp.controller" />
-	
-	<!-- Root Context: defines shared resources visible to all other web components -->
-	<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-        <property name="mappings">
-            <props>
-                <prop key="form">formController</prop>
-                <prop key="calculadora">calculadoraController</prop>
-                <prop key="personas">personaController</prop>
-            </props>
-        </property>
-    </bean>
-    
+	<context:component-scan base-package="co.com.sp" />
+	    
     <bean id="propertyConfigurer"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
 		p:location="classpath:jdbc.properties" />

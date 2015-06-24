@@ -7,7 +7,7 @@
         <dependent-module archiveName="core-hibernate-spring-1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/core-hibernate-spring/core-hibernate-spring">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-		<property name="java-output-path" value="target/classes"/>
+		<property name="java-output-path" value="/spring-mvc-web/target/classes"/>
         <property name="context-root" value="spring-mvc-web"/>
 	</wb-module>
 </project-modules>

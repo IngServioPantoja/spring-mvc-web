@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import co.com.sp.capadominio.ParametroPersona;
@@ -16,6 +17,7 @@ import co.com.sp.capaservicio.PersonaService;
 import co.com.sp.capaservicio.excepciones.BusinessException;
 
 @Controller
+@RequestMapping("/private/personas")
 public class PersonaController {
     
 	@Autowired
@@ -27,7 +29,7 @@ public class PersonaController {
 	final Long ID_TIPO_PARAMETRO_PERSONA = (long) 1;
 	
     //form.htm?verForm
-    @RequestMapping(params = "listar")
+	@RequestMapping(method = RequestMethod.GET)
     public ModelAndView listar(){
         ModelAndView mav = new ModelAndView("/personas/listar"); //view.jsp
         List<ParametroPersona> generos = new ArrayList<ParametroPersona>();
